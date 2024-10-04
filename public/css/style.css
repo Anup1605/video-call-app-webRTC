@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body {
+    background: #f0f4f8;
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Main container styling */
+.main-container {
+    display: flex;
+    height: 90vh;
+    width: 90vw;
+    max-width: 1400px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contacts section */
+.caller-list-wrapper {
+    flex-basis: 25rem;
+    background-color: #f7f7f9;
+    border-right: 1px solid #ddd;
+    padding: 2rem;
+}
+.caller-list-heading {
+    font-size: 2rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.caller-list {
+    list-style: none;
+    padding: 0;
+}
+.caller-list > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.caller-list > li:hover {
+    background-color: #f0f0f0;
+}
+.call-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.call-btn img {
+    width: 24px;
+}
+
+/* Video call container */
+.video-call-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    padding: 2rem;
+}
+.video-streams {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.local-video,
+.remote-video {
+    position: relative;
+    width: 45%;
+    height: 60vh;
+    background-color: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+.local-video::before,
+.remote-video::before {
+    content: 'Local Video';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.remote-video::before {
+    content: 'Remote Video';
+}
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.username-input {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.username-input input {
+    width: 20rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+    outline: none;
+}
+.username-input button {
+    padding: 1rem 2rem;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.username-input button:hover {
+    background-color: #145dbf;
+}
+
+/* Call end button */
+.call {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #8f3cf4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.call img {
+    width: 24px;
+}
+.d-none {
+    display: none;
+}
